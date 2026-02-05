@@ -1,0 +1,317 @@
+/* static/css/twing.css */
+.twing_area {
+  position: fixed;
+  z-index: 2147483000;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.twing_area.rightBottom {
+  right: 16px;
+  bottom: 16px;
+}
+
+.twing_area.rightTop {
+  right: 16px;
+  top: 16px;
+}
+
+.twing_area.leftBottom {
+  left: 16px;
+  bottom: 16px;
+}
+
+.twing_area.leftTop {
+  left: 16px;
+  top: 16px;
+}
+
+.twing_area.topAll {
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.twing_area.middleAll {
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.twing_area.bottomAll {
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.twing_area.leftAll {
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.twing_area.rightAll {
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.twing {
+  position: relative;
+  margin-top: 8px;
+  pointer-events: auto;
+  box-sizing: border-box;
+}
+
+.twing:first-child {
+  margin-top: 0;
+}
+
+.twing_slider {
+  position: relative;
+  box-sizing: border-box;
+  min-width: 240px;
+  min-height: 64px;
+  padding: 12px 12px 10px 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: transparent;
+  transform-origin: center center;
+  transition:
+    transform 0.22s ease,
+    opacity 0.22s ease,
+    min-height 0.22s ease;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.22);
+}
+
+.twing_closing {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.twing_bg {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+}
+
+.twing_msg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 40px;
+  padding-right: 28px;
+  box-sizing: border-box;
+  max-height: 260px;
+  overflow: hidden;
+}
+
+.twing_add_scroll {
+  overflow-y: auto;
+}
+
+.twing_add_bottom {
+  padding-bottom: 52px;
+}
+
+.twing_icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: rgba(15, 23, 42, 0.12);
+  color: rgba(15, 23, 42, 0.9);
+  box-sizing: border-box;
+}
+
+.twing_icon.small {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+}
+
+.twing_icon.large {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+}
+
+.twing_icon.info::before {
+  content: "i";
+}
+
+.twing_icon.success::before {
+  content: "✓";
+}
+
+.twing_icon.warning::before {
+  content: "!";
+}
+
+.twing_icon.error::before {
+  content: "!";
+}
+
+.twing_icon.notification::before {
+  content: "●";
+}
+
+.twing_icon.confirm::before {
+  content: "?";
+}
+
+.twing_subject {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.twing_body {
+  font-size: 13px;
+  line-height: 1.6;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.twing_percent_top,
+.twing_percent_bottom {
+  position: relative;
+  height: 3px;
+  overflow: hidden;
+}
+
+.twing_percent_top {
+  margin-bottom: 2px;
+}
+
+.twing_percent_bottom {
+  margin-top: 2px;
+}
+
+.twing_progress {
+  width: 0;
+  height: 100%;
+  background: #99bdf9;
+  transition: width 0.12s linear;
+}
+
+.twing_count {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.twing_add_scroll.twing_add_bottom + .twing_count {
+  bottom: 44px;
+}
+
+.twing_btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.twing_btn:hover {
+  background: rgba(15, 23, 42, 0.08);
+  transform: translateY(-1px);
+}
+
+.twing_bottom_btn_wrap {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 8px 10px 10px 10px;
+  box-sizing: border-box;
+}
+
+.twing_bottom_btn,
+.twing_confirm_ok,
+.twing_confirm_cancel {
+  min-width: 72px;
+  height: 30px;
+  border-radius: 9999px;
+  border: none;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    filter 0.15s ease,
+    transform 0.15s ease;
+}
+
+.twing_bottom_btn:hover,
+.twing_confirm_ok:hover,
+.twing_confirm_cancel:hover {
+  filter: brightness(0.96);
+  transform: translateY(-1px);
+}
+
+.twing_confirm_cancel {
+  opacity: 0.85;
+}
+
+.twing_overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147482000;
+  background: rgba(51, 51, 51, 0.3);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: auto;
+}
+
+.twing_area.topAll .twing,
+.twing_area.bottomAll .twing {
+  width: 100%;
+}
+
+.twing_area.leftAll .twing,
+.twing_area.rightAll .twing {
+  height: 100%;
+}
+
+@media (max-width: 640px) {
+  .twing_area.rightBottom,
+  .twing_area.rightTop,
+  .twing_area.leftBottom,
+  .twing_area.leftTop {
+    left: 8px;
+    right: 8px;
+  }
+
+  .twing {
+    width: 100%;
+    max-width: none;
+  }
+}
