@@ -97,9 +97,6 @@ video-editor/
     ├── LICENSE
     ├── README.md
     ├── requirements.txt
-    ├── tools
-    │   └── openapi-types.sh
-    └── web
-        └── src
-            └── api
+    └── tools
+        └── openapi-types.sh
 ```
